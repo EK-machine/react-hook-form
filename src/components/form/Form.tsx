@@ -4,20 +4,33 @@ import Input from '../input/Input';
 import Checkbox from '../checkbox/Checkbox';
 import Radio from '../radio/Radio';
 import Select from '../select/Select';
-import { inputs, radios, selects } from '../../data/data';
+import { inputs, radios, selects, validations } from '../../data/data';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { FormFields } from '../../types/types';
 
 const Form: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormFields>();
+  const onSubmit: SubmitHandler<FormFields> = (data) => {
+    console.log(data);
+  };
+  console.log(errors);
   return (
-    <form className={styles.form}>
-      {inputs.map((e) => (
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      {inputs.map((e, i) => (
         <Input
+          register={register}
           key={e.forId}
           forId={e.forId}
           name={e.name}
           label={e.label}
           placeholder={e.placeholder}
           notice={e.notice}
-          error={e.error}
+          validation={validations[i]}
+          error={errors}
         />
       ))}
       <Checkbox />
