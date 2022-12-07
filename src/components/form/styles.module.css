@@ -1,7 +1,34 @@
 .form {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100vh;
-    background: #FFFFFF;
-    padding: 96px 98px auto 98px;
+  padding: 96px 98px 0px 98px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 96px);
+  background: #ffffff;
+}
+
+.radiosContainer {
+  margin-bottom: 32px;
+}
+
+.selectContainer {
+  height: 56px;
+  margin-bottom: 32px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 22px;
+  font-family: 'Noto Sans';
+  padding: 0 16px;
+}
+
+.btn {
+  height: 56px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 22px;
+  font-family: 'Noto Sans';
+  padding: 0 16px;
+  cursor: pointer;
 }

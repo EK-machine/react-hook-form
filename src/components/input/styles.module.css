@@ -1,7 +1,46 @@
-.form {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100vh;
-    background: #FFFFFF;
-    padding: 96px 98px auto 98px;
+.inputContainer {
+  margin-bottom: 32px;
+}
+
+.label {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+  text-align: left;
+}
+
+.input {
+  margin-top: 8px;
+  display: block;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 16px;
+  height: 56px;
+  line-height: 24px;
+  font-size: 24px;
+  font-family: 'Noto Sans';
+  box-sizing: border-box;
+}
+
+.notice,
+.error {
+  margin: 8px 0 0 0;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.notice {
+  color: #666666;
+}
+
+.error {
+  color: #eb5757;
 }

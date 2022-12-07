@@ -1,12 +1,12 @@
 import Form from './components/form/Form';
-import './app.css'
+import './app.css';
 
-const App=()=>{
+const App = () => {
   return (
-    <div className='main'>
+    <div className="main">
       <Form />
     </div>
   );
-}
+};
 
 export default App;
