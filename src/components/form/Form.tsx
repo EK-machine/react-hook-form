@@ -26,6 +26,7 @@ const Form: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
+    console.log('data', data);
     const report: Report = doSubmit(data);
     dispatch(setReport(report));
     !data.remember && reset();
@@ -49,7 +50,7 @@ const Form: React.FC = () => {
           />
         ))}
         <Checkbox register={register} />
-        <select {...register('role')} className={styles.selectContainer} name="roleSelect">
+        <select {...register('role')} className={styles.selectContainer} name="role">
           {options.map((e) => (
             <Select key={e.value} value={e.value} />
           ))}
