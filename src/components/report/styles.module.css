@@ -1,0 +1,60 @@
+.reportContainer {
+  max-width: 1200px;
+  padding: 96px 98px 0px 98px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.heading {
+  font-family: 'Noto Sans';
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.reportWrapper {
+  padding: 10px 10px 0px 10px;
+  width: 100%;
+  background: #0075fa;
+  border: 2px solid #8d8888;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.reportLine {
+  display: flex;
+}
+
+.fieldName,
+.fieldValue {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: black;
+  text-align: left;
+}
+
+.fieldName {
+  font-weight: 400;
+  margin: 0 16px 32px 0;
+}
+
+.fieldValue {
+  font-weight: 600;
+  margin: 0 0 32px 0;
+}
+
+.clear {
+  display: block;
+  margin: 0 auto 32px auto;
+  width: 270px;
+  height: 48px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #666666;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-size: 20px;
+  border-radius: 8px;
+}

@@ -46,17 +46,29 @@ export interface RadioProps {
 
 export interface SelectProps {
   value: string;
-  selected?: boolean;
 }
 
 export interface FormFields {
   username: string;
   email: string;
+  role: string;
   password: string;
   remember: boolean;
-  incName: boolean;
-  incMail: boolean;
-  incPass: boolean;
-  incRole: boolean;
-  incAll: boolean;
+  include: 'all' | 'name' | 'mail' | 'password' | 'role';
+}
+
+export interface Report {
+  email?: string;
+  password?: string;
+  remember: boolean;
+  role?: string;
+  username?: string;
+}
+
+export interface State {
+  report: Report | null;
+}
+
+export interface ReportProps {
+  report: Report;
 }
