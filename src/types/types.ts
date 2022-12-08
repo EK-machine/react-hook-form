@@ -33,10 +33,15 @@ export interface TextInputProps {
   validation: Validations;
 }
 
+export interface CheckboxProps {
+  register: UseFormRegister<FormFields>;
+}
+
 export interface RadioProps {
   forId: string;
   name: string;
   label: string;
+  register: UseFormRegister<FormFields>;
 }
 
 export interface SelectProps {
@@ -48,4 +53,10 @@ export interface FormFields {
   username: string;
   email: string;
   password: string;
+  remember: boolean;
+  incName: boolean;
+  incMail: boolean;
+  incPass: boolean;
+  incRole: boolean;
+  incAll: boolean;
 }

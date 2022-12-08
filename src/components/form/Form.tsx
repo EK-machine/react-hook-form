@@ -13,9 +13,16 @@ const Form: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormFields>();
+    reset,
+  } = useForm<FormFields>({
+    defaultValues: {
+      email: 'test@test.com',
+    },
+    mode: 'onChange',
+  });
   const onSubmit: SubmitHandler<FormFields> = (data) => {
     console.log(data);
+    reset();
   };
   console.log(errors);
   return (
@@ -33,7 +40,7 @@ const Form: React.FC = () => {
           error={errors}
         />
       ))}
-      <Checkbox />
+      <Checkbox register={register} />
       <select className={styles.selectContainer} name="roleSelect">
         {selects.map((e) => (
           <Select key={e.value} value={e.value} selected={e.selected} />
@@ -41,7 +48,7 @@ const Form: React.FC = () => {
       </select>
       <div className={styles.radiosContainer}>
         {radios.map((e) => (
-          <Radio key={e.forId} forId={e.forId} name={e.name} label={e.label} />
+          <Radio register={register} key={e.forId} forId={e.forId} name={e.name} label={e.label} />
         ))}
       </div>
       <input className={styles.btn} type="submit" />
