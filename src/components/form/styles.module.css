@@ -1,9 +1,22 @@
-.form {
+.formSection {
   padding: 96px 98px 0px 98px;
   max-width: 1200px;
   margin: 0 auto;
   height: calc(100vh - 96px);
   background: #ffffff;
+}
+
+.heading {
+  font-family: 'Noto Sans';
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.smallheading {
+  font-family: 'Noto Sans';
+  font-size: 22px;
+  margin: 0 0 16px 0;
 }
 
 .radiosContainer {

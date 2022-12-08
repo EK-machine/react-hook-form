@@ -12,14 +12,14 @@ export const inputs = [
 ];
 
 export const radios = [
-  { forId: 'incName', name: 'incName', label: 'Include username' },
-  { forId: 'incMail', name: 'incMail', label: 'Include email' },
-  { forId: 'incPass', name: 'incPass', label: 'Include password' },
-  { forId: 'incRole', name: 'incRole', label: 'Include role' },
-  { forId: 'incAll', name: 'incAll', label: 'Include all' },
+  { forId: 'incAll', name: 'all', label: 'Include all' },
+  { forId: 'incName', name: 'name', label: 'Include username' },
+  { forId: 'incMail', name: 'mail', label: 'Include email' },
+  { forId: 'incPass', name: 'password', label: 'Include password' },
+  { forId: 'incRole', name: 'role', label: 'Include role' },
 ];
 
-export const selects = [{ value: 'User', selected: true }, { value: 'Admin' }];
+export const options = [{ value: 'User', selected: true }, { value: 'Admin' }];
 
 export const validations = [
   {
