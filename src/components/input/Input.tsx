@@ -1,15 +1,16 @@
 import React from 'react';
+import { InputProps, InpustNames } from '../../types/types';
 import styles from './styles.module.css';
-import { TextInputProps } from '../../types/types';
 
-const Input: React.FC<TextInputProps> = ({ forId, name, placeholder, label, notice, error, register, validation }) => {
+const Input: React.FC<InputProps> = ({ onChange, forId, name, placeholder, label, notice, error, value }) => {
   return (
     <div className={styles.inputContainer}>
       <label className={styles.label} htmlFor={forId}>
         {label}
       </label>
       <input
-        {...register(name as 'username' | 'email' | 'password', validation)}
+        onChange={onChange}
+        value={value}
         type="text"
         className={styles.input}
         name={name}
@@ -17,9 +18,7 @@ const Input: React.FC<TextInputProps> = ({ forId, name, placeholder, label, noti
         placeholder={placeholder}
       />
       <p className={styles.notice}>{notice}</p>
-      {error && error[name as 'username' | 'email' | 'password'] && (
-        <p className={styles.error}>{error[name as 'username' | 'email' | 'password']?.message}</p>
-      )}
+      {error && error[name as InpustNames] && <p className={styles.error}>{error[name as InpustNames]?.message}</p>}
     </div>
   );
 };

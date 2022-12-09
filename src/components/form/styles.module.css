@@ -2,8 +2,8 @@
   padding: 96px 98px 0px 98px;
   max-width: 1200px;
   margin: 0 auto;
-  height: calc(100vh - 96px);
   background: #ffffff;
+  position: relative;
 }
 
 .heading {
@@ -35,7 +35,8 @@
   padding: 0 16px;
 }
 
-.btn {
+.btn,
+.btnFill {
   height: 56px;
   background: #ffffff;
   border: 1px solid #cccccc;
@@ -43,5 +44,12 @@
   font-size: 22px;
   font-family: 'Noto Sans';
   padding: 0 16px;
+  margin-bottom: 32px;
   cursor: pointer;
+}
+
+.btnFill {
+  position: absolute;
+  bottom: 0px;
+  left: 212px;
 }

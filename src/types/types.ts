@@ -22,17 +22,6 @@ export interface Validations {
   maxLength?: MaxLengthValidation;
 }
 
-export interface TextInputProps {
-  forId: string;
-  name: string;
-  placeholder: string;
-  label: string;
-  notice?: string;
-  error: Partial<FieldErrorsImpl<{ username: string; email: string; password: string }>>;
-  register: UseFormRegister<FormFields>;
-  validation: Validations;
-}
-
 export interface CheckboxProps {
   register: UseFormRegister<FormFields>;
 }
@@ -48,13 +37,19 @@ export interface SelectProps {
   value: string;
 }
 
+export type InpustNames = 'username' | 'email' | 'password';
+
+export type AllNames = 'username' | 'email' | 'password' | 'role' | 'remember' | 'include';
+
+export type IncludeNames = 'all' | 'name' | 'mail' | 'password' | 'role';
+
 export interface FormFields {
   username: string;
   email: string;
   role: string;
   password: string;
   remember: boolean;
-  include: 'all' | 'name' | 'mail' | 'password' | 'role';
+  include: IncludeNames;
 }
 
 export interface Report {
@@ -71,4 +66,15 @@ export interface State {
 
 export interface ReportProps {
   report: Report;
+}
+
+export interface InputProps {
+  onChange?: (...event: any[]) => void;
+  value: string;
+  name: AllNames;
+  forId: string;
+  placeholder: string;
+  label: string;
+  notice?: string;
+  error: Partial<FieldErrorsImpl<{ username: string; email: string; password: string }>>;
 }
